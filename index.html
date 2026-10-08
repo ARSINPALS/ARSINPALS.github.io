@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- Los scripts de Instagram y TikTok ya no se cargan aquí: se inyectan
+         desde index.js solo cuando la sección "Contenido" entra en pantalla -->
+
+</head>
+
+<body>
+    <div class="galaxy-stars" aria-hidden="true"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">[</span>
+                ARSINPALS
+                <span class="logo-bracket">]</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#redes" class="nav-link" onclick="closeMenu()"><i class="fab fa-instagram"></i> Redes</a></li>
+                <li><a href="#gaming" class="nav-link" onclick="closeMenu()"><i class="fas fa-gamepad"></i> Gaming</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Overlay para cerrar menú en mobile -->
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+    <div class="particles" id="particles"></div>
+
+    <!-- VISOR DE FOTO DE PERFIL + BLACK FLASH GIF -->
+    <div class="profile-lightbox" id="profileLightbox" aria-hidden="true">
+        <button class="profile-lightbox__close" id="profileLightboxClose" type="button" aria-label="Cerrar">×</button>
+        <div class="profile-black-flash" id="profileBlackFlash" aria-hidden="true">
+            <img id="profileBlackFlashGif" alt="" decoding="async" loading="lazy" referrerpolicy="no-referrer" draggable="false">
+        </div>
+        <img class="profile-lightbox__image" id="profileLightboxImage" src="oscar.jpg" alt="Óscar CV ampliado">
+        <div class="profile-lightbox__hint">Clic para zoom · ESC para cerrar</div>
+    </div>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <div class="hero">
+            <div class="hero-glow"></div>
+            <img src="oscar.jpg" alt="Óscar CV" class="profile-img" width="150" height="150" fetchpriority="high">
+            <h1>Oscar CV</h1>
+            <div class="subtitle">
+                Gamer <span class="sep">·</span> Dev <span class="sep">·</span> Gym <span class="sep">·</span> Mecatrónica
+            </div>
+            <div class="tags">
+                <span class="tag"><i class="fa-solid fa-khanda"></i> God of War</span>
+                <span class="tag"><i class="fa-solid fa-star-of-david"></i> Silent Hill</span>
+                <span class="tag"><i class="fa-solid fa-skull"></i> Dead by Daylight</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- REDES SOCIALES -->
+        <div class="section" id="redes">
+            <h2 class="section-title"><i class="fa-solid fa-share-nodes"></i> Redes Sociales</h2>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/ockapkb/" target="_blank" class="social-card">
+                    <div class="social-icon insta-icon"><i class="fab fa-instagram"></i></div>
+                    <div class="social-info">
+                        <h3>INSTAGRAM</h3>
+                        <p>@ockapkb</p>
+                    </div>
+                </a>
+                <a href="https://www.x.com/ARSINPALS" class="social-card">
+                    <div class="social-icon x-icon"><i class="fab fa-x"></i></div>
+                    <div class="social-info">
+                        <h3>X</h3>
+                        <p>ARSINPALS</p>
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@ARSINPALS" target="_blank" class="social-card">
+                    <div class="social-icon tiktok-icon"><i class="fab fa-tiktok"></i></div>
+                    <div class="social-info">
+                        <h3>TIKTOK</h3>
+                        <p>@ARSINPALS</p>
+                    </div>
+                </a>
+                <a href="https://twitch.com/ARSINPALS/" class="social-card">
+                    <div class="social-icon twitch-icon"><i class="fab fa-twitch"></i></div>
+                    <div class="social-info">
+                        <h3>TWITCH</h3>
+                        <p>ARSINPALS</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- GAMING - PREMIUM CARDS -->
+        <div class="section" id="gaming">
+            <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> Gaming</h2>
+            <div class="games-grid">
+
+                <!-- STEAM CARD -->
+                <div class="flip-card lol-card">
+                    <div class="flip-inner">
+                        <!-- FRENTE -->
+                        <div class="flip-front">
+                            <div class="card-bg lol-bg" style="background-image:url('https://64.media.tumblr.com/7ffe0bc37567028c24fd9402d2515d94/5c4cb83e3a0200af-ff/s540x810/9cc73172cdef852331c7ad54e421d76aa6fe0706.gif');background-size:cover;background-position:center top;""></div>
+                            <!-- SVG animado sobre la imagen de cueva -->
+                            <svg class="lol-anim-svg" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <!-- Gradiente oscuro para bordes (vignette) -->
+                                    <radialGradient id="vigF" cx="50%" cy="45%" r="65%">
+                                        <stop offset="55%" stop-color="transparent"/>
+                                        <stop offset="100%" stop-color="#000008" stop-opacity="0.75"/>
+                                    </radialGradient>
+                                    <!-- Halo azul-morado sobre pared izquierda -->
+                                    <radialGradient id="glowL_F" cx="0%" cy="38%" r="55%">
+                                        <stop offset="0%"  stop-color="#2244ff" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <!-- Halo morado pared derecha -->
+                                    <radialGradient id="glowR_F" cx="100%" cy="48%" r="50%">
+                                        <stop offset="0%"  stop-color="#7020cc" stop-opacity="0.30"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <filter id="glow_F" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                                        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                    <filter id="blur2_F"><feGaussianBlur stdDeviation="2"/></filter>
+                                    <filter id="blur5_F"><feGaussianBlur stdDeviation="5"/></filter>
+                                    <clipPath id="cardClipF"><rect width="420" height="520" rx="22"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#cardClipF)">
+
+                                    <!-- Vignette oscuro en bordes -->
+                                    <rect width="420" height="520" fill="url(#vigF)"/>
+                                    <!-- Refuerzo de halos mágicos sobre la imagen -->
+                                    <rect width="420" height="520" fill="url(#glowL_F)" opacity="0.8"/>
+                                    <rect width="420" height="520" fill="url(#glowR_F)" opacity="0.8"/>
+
+                                    <!-- ── PARTÍCULAS FLOTANTES ANIMADAS ── -->
+                                    <!-- Partícula 1 azul -->
+                                    <circle cx="72" cy="310" r="2.2" fill="#55aaff" opacity="0.9" filter="url(#glow_F)">
+                                        <animate attributeName="cy" values="310;270;310" dur="4.2s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 2 morada -->
+                                    <circle cx="58" cy="235" r="1.6" fill="#aa55ff" opacity="0.8" filter="url(#glow_F)">
+                                        <animate attributeName="cy" values="235;195;235" dur="5.1s" repeatCount="indefinite"/>
+                                        <animate attributeName="cx" values="58;64;58" dur="5.1s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="5.1s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 3 azul brillante -->
+                                    <circle cx="88" cy="188" r="1.8" fill="#4488ff" opacity="0.85" filter="url(#glow_F)">
+                                        <animate attributeName="cy" values="188;150;188" dur="3.8s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.85;0.25;0.85" dur="3.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 4 derecha morada -->
+                                    <circle cx="348" cy="265" r="2" fill="#9944ee" opacity="0.8" filter="url(#glow_F)">
+                                        <animate attributeName="cy" values="265;225;265" dur="4.7s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.8;0.25;0.8" dur="4.7s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 5 derecha azul -->
+                                    <circle cx="362" cy="198" r="1.5" fill="#6699ff" opacity="0.75">
+                                        <animate attributeName="cy" values="198;162;198" dur="5.8s" repeatCount="indefinite"/>
+                                        <animate attributeName="cx" values="362;356;362" dur="5.8s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.75;0.2;0.75" dur="5.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 6 centro -->
+                                    <circle cx="210" cy="350" r="1.8" fill="#5555dd" opacity="0.7">
+                                        <animate attributeName="cy" values="350;315;350" dur="6.2s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.7;0.15;0.7" dur="6.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 7 pequeña izq-alta -->
+                                    <circle cx="105" cy="145" r="1.2" fill="#88bbff" opacity="0.7">
+                                        <animate attributeName="cy" values="145;118;145" dur="3.4s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.7;0.1;0.7" dur="3.4s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Partícula 8 der-alta -->
+                                    <circle cx="312" cy="138" r="1.3" fill="#9966ff" opacity="0.65">
+                                        <animate attributeName="cy" values="138;112;138" dur="4.5s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.65;0.1;0.65" dur="4.5s" repeatCount="indefinite"/>
+                                    </circle>
+
+                                    <!-- ── CRIATURA AZUL IZQUIERDA ANIMADA ── -->
+                                    <g filter="url(#glow_F)">
+                                        <ellipse cx="52" cy="268" rx="18" ry="22" fill="#1a44cc" opacity="0.45" filter="url(#blur5_F)">
+                                            <animate attributeName="opacity" values="0.45;0.65;0.45" dur="3s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="52" cy="265" rx="9" ry="10" fill="#5588ff" opacity="0.7" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+                                            <animate attributeName="ry" values="10;12;10" dur="3s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="52" cy="264" rx="4" ry="5" fill="#aaccff" opacity="0.9"/>
+                                        <circle cx="47" cy="261" r="2.5" fill="#88ccff" opacity="0.95"/>
+                                        <circle cx="57" cy="261" r="2.5" fill="#88ccff" opacity="0.95"/>
+                                        <circle cx="47" cy="261" r="1.2" fill="#ffffff" opacity="1">
+                                            <animate attributeName="opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="57" cy="261" r="1.2" fill="#ffffff" opacity="1">
+                                            <animate attributeName="opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"/>
+                                        </circle>
+                                    </g>
+
+                                    <!-- ── CRIATURA MORADA DERECHA ANIMADA ── -->
+                                    <g filter="url(#glow_F)">
+                                        <ellipse cx="368" cy="295" rx="16" ry="18" fill="#5015aa" opacity="0.4" filter="url(#blur5_F)">
+                                            <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3.5s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="368" cy="292" rx="8" ry="9" fill="#9944ee" opacity="0.65" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.65;0.95;0.65" dur="3.5s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="368" cy="291" rx="4" ry="4" fill="#cc99ff" opacity="0.85"/>
+                                        <circle cx="363" cy="288" r="2.2" fill="#cc88ff" opacity="0.9"/>
+                                        <circle cx="373" cy="288" r="2.2" fill="#cc88ff" opacity="0.9"/>
+                                        <circle cx="363" cy="288" r="1" fill="#ffffff" opacity="1">
+                                            <animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle cx="373" cy="288" r="1" fill="#ffffff" opacity="1">
+                                            <animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/>
+                                        </circle>
+                                    </g>
+
+                                    <!-- ── FLORES MORADAS PISO (parpadeantes) ── -->
+                                    <!-- Flor inf-izquierda grande -->
+                                    <g filter="url(#glow_F)">
+                                        <ellipse cx="38" cy="492" rx="9" ry="7" fill="#6615bb" opacity="0.8" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3.6s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="38" cy="492" rx="4.5" ry="3.5" fill="#bb66ff" opacity="0.9">
+                                            <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3.6s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="38" cy="492" rx="2" ry="1.5" fill="#eeccff" opacity="1"/>
+                                    </g>
+                                    <!-- Flor inf-izq 2 -->
+                                    <g filter="url(#glow_F)">
+                                        <ellipse cx="72" cy="506" rx="6.5" ry="5" fill="#5510aa" opacity="0.75" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.75;0.35;0.75" dur="4.4s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="72" cy="506" rx="3" ry="2.5" fill="#aa55ee" opacity="0.85">
+                                            <animate attributeName="opacity" values="0.85;0.45;0.85" dur="4.4s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="72" cy="506" rx="1.5" ry="1" fill="#ddbbff" opacity="1"/>
+                                    </g>
+                                    <!-- Flor inf-izq pequeña -->
+                                    <g>
+                                        <ellipse cx="18" cy="470" rx="4.5" ry="3.5" fill="#4408aa" opacity="0.65" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.65;0.2;0.65" dur="5.2s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="18" cy="470" rx="2" ry="1.5" fill="#9944dd" opacity="0.8"/>
+                                    </g>
+                                    <!-- Flor der grande -->
+                                    <g filter="url(#glow_F)">
+                                        <ellipse cx="382" cy="497" rx="8" ry="6" fill="#6615bb" opacity="0.78" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.78;0.38;0.78" dur="3.9s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="382" cy="497" rx="4" ry="3" fill="#aa55ee" opacity="0.88">
+                                            <animate attributeName="opacity" values="0.88;0.48;0.88" dur="3.9s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="382" cy="497" rx="1.8" ry="1.3" fill="#ddbbff" opacity="1"/>
+                                    </g>
+                                    <!-- Flor der 2 -->
+                                    <g>
+                                        <ellipse cx="350" cy="510" rx="5.5" ry="4" fill="#5510aa" opacity="0.7" filter="url(#blur2_F)">
+                                            <animate attributeName="opacity" values="0.7;0.3;0.7" dur="4.8s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="350" cy="510" rx="2.5" ry="2" fill="#9944dd" opacity="0.8"/>
+                                    </g>
+
+                                    <!-- ── DESTELLOS DE ENERGÍA AZUL EN PAREDES ── -->
+                                    <circle cx="62" cy="155" r="3" fill="#4488ff" opacity="0.9" filter="url(#glow_F)">
+                                        <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.5s" repeatCount="indefinite"/>
+                                        <animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="48" cy="118" r="2.2" fill="#3366ff" opacity="0.8" filter="url(#glow_F)">
+                                        <animate attributeName="opacity" values="0.8;0.15;0.8" dur="3.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Destello morado derecha -->
+                                    <circle cx="368" cy="182" r="2.8" fill="#9933dd" opacity="0.85" filter="url(#glow_F)">
+                                        <animate attributeName="opacity" values="0.85;0.2;0.85" dur="2.9s" repeatCount="indefinite"/>
+                                        <animate attributeName="r" values="2.8;4.5;2.8" dur="2.9s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="378" cy="140" r="1.8" fill="#7722cc" opacity="0.75">
+                                        <animate attributeName="opacity" values="0.75;0.15;0.75" dur="3.7s" repeatCount="indefinite"/>
+                                    </circle>
+
+                                    <!-- Overlay de bruma sutil (pulsa suavemente) -->
+                                    <ellipse cx="210" cy="200" rx="120" ry="140" fill="#1a2a80" opacity="0.06">
+                                        <animate attributeName="opacity" values="0.06;0.12;0.06" dur="7s" repeatCount="indefinite"/>
+                                    </ellipse>
+
+                                </g>
+                            </svg>
+                            <div class="lol-mask-badge"><i class="fa-brands fa-steam-symbol"></i></div>
+                            <div class="card-scanlines"></div>
+                            <div class="card-char-wrap">
+                                <img src="kratos.png" alt="Kratos" class="card-char-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-front-info">
+                                <div class="card-info-top">
+                                    <span class="card-game-chip lol-chip"><i class="fa-brands fa-square-steam"></i> Steam</span>
+                                    <span class="lol-role"><i class="fa-solid fa-earth-americas"></i> SURVIVAL</span>
+                                </div>
+                                <div class="card-info-bottom">
+                                    <p class="card-game-label">Steam</p>
+                                    <h3 class="card-username">ARSINPALS<span class="card-tag">
+                                    <div class="lol-statbar">
+                                        <span class="stat-label">Logros</span>
+                                        <div class="stat-track"><div class="stat-fill"></div></div>
+                                    </div>
+                                    <div class="card-divider-line lol-line"></div>
+                                    <p class="card-sub">SteamID <i class="fas fa-arrow-up-right-from-square"></i></p>
+                                </div>
+                            </div>
+                            <div class="card-corner top-left"></div>
+                            <div class="card-corner top-right"></div>
+                            <div class="card-corner bottom-left"></div>
+                            <div class="card-corner bottom-right"></div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="flip-back lol-back">
+                            <div class="card-bg lol-bg" style="background-image:url('https://64.media.tumblr.com/7ffe0bc37567028c24fd9402d2515d94/5c4cb83e3a0200af-ff/s540x810/9cc73172cdef852331c7ad54e421d76aa6fe0706.gif');background-size:cover;background-position:center top;""></div>
+                            <svg class="lol-anim-svg" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <radialGradient id="vigLOLB" cx="50%" cy="45%" r="65%">
+                                        <stop offset="55%" stop-color="transparent"/>
+                                        <stop offset="100%" stop-color="#000008" stop-opacity="0.75"/>
+                                    </radialGradient>
+                                    <radialGradient id="glowLB" cx="0%" cy="38%" r="55%">
+                                        <stop offset="0%"  stop-color="#2244ff" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <radialGradient id="glowRB" cx="100%" cy="48%" r="50%">
+                                        <stop offset="0%"  stop-color="#7020cc" stop-opacity="0.30"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <filter id="glowFB" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                                        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                    <filter id="blur2B"><feGaussianBlur stdDeviation="2"/></filter>
+                                    <filter id="blur5B"><feGaussianBlur stdDeviation="5"/></filter>
+                                    <clipPath id="clipLOLB"><rect width="420" height="520" rx="22"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#clipLOLB)">
+                                    <rect width="420" height="520" fill="url(#vigLOLB)"/>
+                                    <rect width="420" height="520" fill="url(#glowLB)" opacity="0.8"/>
+                                    <rect width="420" height="520" fill="url(#glowRB)" opacity="0.8"/>
+                                    <!-- Partículas flotantes -->
+                                    <circle cx="72" cy="310" r="2.2" fill="#55aaff" opacity="0.9" filter="url(#glowFB)">
+                                        <animate attributeName="cy" values="310;270;310" dur="4.2s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="58" cy="235" r="1.6" fill="#aa55ff" opacity="0.8" filter="url(#glowFB)">
+                                        <animate attributeName="cy" values="235;195;235" dur="5.1s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="5.1s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="348" cy="265" r="2" fill="#9944ee" opacity="0.8" filter="url(#glowFB)">
+                                        <animate attributeName="cy" values="265;225;265" dur="4.7s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.8;0.25;0.8" dur="4.7s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="210" cy="350" r="1.8" fill="#5555dd" opacity="0.7">
+                                        <animate attributeName="cy" values="350;315;350" dur="6.2s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.7;0.15;0.7" dur="6.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Criatura azul izquierda -->
+                                    <ellipse cx="52" cy="268" rx="18" ry="22" fill="#1a44cc" opacity="0.45" filter="url(#blur5B)">
+                                        <animate attributeName="opacity" values="0.45;0.65;0.45" dur="3s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="52" cy="265" rx="9" ry="10" fill="#5588ff" opacity="0.7" filter="url(#blur2B)">
+                                        <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="52" cy="264" rx="4" ry="5" fill="#aaccff" opacity="0.9"/>
+                                    <circle cx="47" cy="261" r="2.5" fill="#88ccff" opacity="0.95"/>
+                                    <circle cx="57" cy="261" r="2.5" fill="#88ccff" opacity="0.95"/>
+                                    <circle cx="47" cy="261" r="1.2" fill="#fff" opacity="1">
+                                        <animate attributeName="opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="57" cy="261" r="1.2" fill="#fff" opacity="1">
+                                        <animate attributeName="opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Criatura morada derecha -->
+                                    <ellipse cx="368" cy="295" rx="16" ry="18" fill="#5015aa" opacity="0.4" filter="url(#blur5B)">
+                                        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3.5s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="368" cy="292" rx="8" ry="9" fill="#9944ee" opacity="0.65" filter="url(#blur2B)">
+                                        <animate attributeName="opacity" values="0.65;0.95;0.65" dur="3.5s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="368" cy="291" rx="4" ry="4" fill="#cc99ff" opacity="0.85"/>
+                                    <circle cx="363" cy="288" r="2.2" fill="#cc88ff" opacity="0.9"/>
+                                    <circle cx="373" cy="288" r="2.2" fill="#cc88ff" opacity="0.9"/>
+                                    <circle cx="363" cy="288" r="1" fill="#fff" opacity="1">
+                                        <animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="373" cy="288" r="1" fill="#fff" opacity="1">
+                                        <animate attributeName="opacity" values="1;0.35;1" dur="3.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Flores moradas piso -->
+                                    <ellipse cx="38" cy="492" rx="9" ry="7" fill="#6615bb" opacity="0.8" filter="url(#blur2B)">
+                                        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3.6s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="38" cy="492" rx="4.5" ry="3.5" fill="#bb66ff" opacity="0.9">
+                                        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3.6s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="38" cy="492" rx="2" ry="1.5" fill="#eeccff" opacity="1"/>
+                                    <ellipse cx="382" cy="497" rx="8" ry="6" fill="#6615bb" opacity="0.78" filter="url(#blur2B)">
+                                        <animate attributeName="opacity" values="0.78;0.38;0.78" dur="3.9s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="382" cy="497" rx="4" ry="3" fill="#aa55ee" opacity="0.88">
+                                        <animate attributeName="opacity" values="0.88;0.48;0.88" dur="3.9s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                    <ellipse cx="382" cy="497" rx="1.8" ry="1.3" fill="#ddbbff" opacity="1"/>
+                                    <!-- Destellos energía -->
+                                    <circle cx="62" cy="155" r="3" fill="#4488ff" opacity="0.9" filter="url(#glowFB)">
+                                        <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.5s" repeatCount="indefinite"/>
+                                        <animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="368" cy="182" r="2.8" fill="#9933dd" opacity="0.85" filter="url(#glowFB)">
+                                        <animate attributeName="opacity" values="0.85;0.2;0.85" dur="2.9s" repeatCount="indefinite"/>
+                                        <animate attributeName="r" values="2.8;4.5;2.8" dur="2.9s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <!-- Overlay de bruma -->
+                                    <ellipse cx="210" cy="200" rx="120" ry="140" fill="#1a2a80" opacity="0.06">
+                                        <animate attributeName="opacity" values="0.06;0.12;0.06" dur="7s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                </g>
+                            </svg>
+                            <div class="card-scanlines"></div>
+                            <div class="back-content">
+                                <div class="card-badge lol-badge"><i class="fa-brands fa-steam-symbol"></i></div>
+                                <p class="back-game">Steam</p>
+                                <h3 class="back-username">ARSINPALS<span class="card-tag"></span></h3>
+                                <div class="card-divider-line lol-line"></div>
+                                <p class="back-desc">Mira mi perfil de Steam</p>
+                                <a href="https://steamcommunity.com/id/ARSINPALS/" target="_blank" class="profile-btn lol-btn">
+                                    Ver perfil <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="card-corner top-left"></div>
+                            <div class="card-corner top-right"></div>
+                            <div class="card-corner bottom-left"></div>
+                            <div class="card-corner bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PLAYSTATION CARD -->
+                <div class="flip-card valo-card">
+                    <div class="flip-inner">
+                        <!-- FRENTE -->
+                        <div class="flip-front">
+                            <div class="card-bg valo-bg" style="background-image:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXgwOWo0YTF0MTBtNDh6cm90a3doam16eHo0cmk2dmYweTFhOWZieiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT8qAZ9GQURUiB4IN2/giphy.gif');background-size:cover;background-position:center top;""></div>
+                            <!-- SVG animado: vignette + chispas magenta del dragon espiritu, igual patron que LoL -->
+                            <svg class="valo-anim-svg" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <radialGradient id="vigValoF" cx="50%" cy="45%" r="65%">
+                                        <stop offset="55%" stop-color="transparent"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0.75"/>
+                                    </radialGradient>
+                                    <radialGradient id="glowValoF" cx="35%" cy="20%" r="55%">
+                                        <stop offset="0%"  stop-color="#ff40c0" stop-opacity="0.30"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <filter id="glowVF" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                                        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                    <filter id="blur2VF"><feGaussianBlur stdDeviation="2"/></filter>
+                                    <clipPath id="cardClipVF"><rect width="420" height="520" rx="22"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#cardClipVF)">
+                                    <rect width="420" height="520" fill="url(#vigValoF)"/>
+                                    <rect width="420" height="520" fill="url(#glowValoF)" opacity="0.8"/>
+                                    <circle cx="60" cy="160" r="2" fill="#ff80d0" opacity="0.9" filter="url(#glowVF)">
+                                        <animate attributeName="cy" values="160;120;160" dur="4.2s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="95" cy="80" r="1.6" fill="#ff60c0" opacity="0.8" filter="url(#glowVF)">
+                                        <animate attributeName="cy" values="80;50;80" dur="5.1s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="5.1s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="35" cy="280" r="1.8" fill="#ff40b0" opacity="0.7" filter="url(#glowVF)">
+                                        <animate attributeName="cy" values="280;245;280" dur="3.8s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="355" cy="170" r="1.5" fill="#cc2080" opacity="0.6" filter="url(#glowVF)">
+                                        <animate attributeName="cy" values="170;140;170" dur="4.7s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="4.7s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="380" cy="235" r="1.3" fill="#dd1888" opacity="0.55">
+                                        <animate attributeName="cy" values="235;205;235" dur="5.8s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.55;0.15;0.55" dur="5.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="175" cy="45" r="1.4" fill="#ff70cc" opacity="0.6">
+                                        <animate attributeName="cy" values="45;25;45" dur="3.4s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.4s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <g filter="url(#glowVF)">
+                                        <ellipse cx="130" cy="88" rx="40" ry="36" fill="#ff20a0" opacity="0.18" filter="url(#blur2VF)">
+                                            <animate attributeName="opacity" values="0.18;0.32;0.18" dur="3.2s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="130" cy="88" rx="18" ry="16" fill="#ff60c8" opacity="0.35" filter="url(#blur2VF)">
+                                            <animate attributeName="opacity" values="0.35;0.55;0.35" dur="3.2s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                    </g>
+                                    <circle cx="150" cy="495" r="2.5" fill="#ff50b8" opacity="0.8" filter="url(#glowVF)">
+                                        <animate attributeName="opacity" values="0.8;0.25;0.8" dur="2.5s" repeatCount="indefinite"/>
+                                        <animate attributeName="r" values="2.5;4;2.5" dur="2.5s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="195" cy="505" r="1.8" fill="#ff70cc" opacity="0.65" filter="url(#glowVF)">
+                                        <animate attributeName="opacity" values="0.65;0.15;0.65" dur="3.1s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <ellipse cx="210" cy="220" rx="130" ry="150" fill="#aa0060" opacity="0.05">
+                                        <animate attributeName="opacity" values="0.05;0.1;0.05" dur="7s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                </g>
+                            </svg>
+                            <svg class="valo-scene-svg" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <radialGradient id="valoDragonGlow" cx="35%" cy="20%" r="55%">
+                                        <stop offset="0%" stop-color="#ff40c0" stop-opacity="0.85"/>
+                                        <stop offset="25%" stop-color="#dd1090" stop-opacity="0.55"/>
+                                        <stop offset="55%" stop-color="#880050" stop-opacity="0.25"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <radialGradient id="valoFloorReflect" cx="42%" cy="100%" r="55%">
+                                        <stop offset="0%" stop-color="#ff40b0" stop-opacity="0.45"/>
+                                        <stop offset="50%" stop-color="#aa0060" stop-opacity="0.18"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <radialGradient id="valoBgPurple" cx="70%" cy="60%" r="45%">
+                                        <stop offset="0%" stop-color="#660030" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <filter id="valoBlur"><feGaussianBlur stdDeviation="10"/></filter>
+                                    <filter id="valoBlurMd"><feGaussianBlur stdDeviation="5"/></filter>
+                                    <filter id="valoBlurSm"><feGaussianBlur stdDeviation="2"/></filter>
+                                    <clipPath id="valoCard"><rect width="420" height="520" rx="22"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#valoCard)">
+                                    <!-- Base negra -->
+                                    <rect width="420" height="520" fill="#0a0005"/>
+                                    <!-- Halo del dragón magenta — arriba izquierda -->
+                                    <ellipse cx="145" cy="105" rx="195" ry="170" fill="url(#valoDragonGlow)" filter="url(#valoBlur)"/>
+                                    <!-- Segundo halo más pequeño y brillante — núcleo del dragón -->
+                                    <ellipse cx="130" cy="88" rx="90" ry="80" fill="#ff20a0" opacity="0.3" filter="url(#valoBlur)"/>
+                                    <!-- Tenue niebla morada oscura lado derecho -->
+                                    <ellipse cx="320" cy="300" rx="150" ry="180" fill="url(#valoBgPurple)" filter="url(#valoBlur)"/>
+                                    <!-- Fondo inferior — transición a negro -->
+                                    <rect x="0" y="300" width="420" height="220" fill="#0a0005" opacity="0.55"/>
+                                    <!-- Reflejo del personaje en el suelo -->
+                                    <ellipse cx="175" cy="495" rx="140" ry="50" fill="url(#valoFloorReflect)" filter="url(#valoBlur)"/>
+                                    <!-- Charco de luz rosa en el suelo — directo bajo el personaje -->
+                                    <ellipse cx="165" cy="485" rx="70" ry="22" fill="#ff30a8" opacity="0.20" filter="url(#valoBlurMd)"/>
+                                    <!-- Chispas/partículas de energía del dragón -->
+                                    <circle cx="55" cy="138" r="2" fill="#ff80d0" opacity="0.85" filter="url(#valoBlurSm)"/>
+                                    <circle cx="55" cy="138" r="1" fill="#ffc0e8" opacity="1"/>
+                                    <circle cx="88" cy="72" r="1.8" fill="#ff60c0" opacity="0.75" filter="url(#valoBlurSm)"/>
+                                    <circle cx="88" cy="72" r="0.8" fill="#ffbbee" opacity="1"/>
+                                    <circle cx="38" cy="195" r="1.5" fill="#ff50b8" opacity="0.65"/>
+                                    <circle cx="175" cy="45" r="1.5" fill="#ff70cc" opacity="0.7" filter="url(#valoBlurSm)"/>
+                                    <circle cx="215" cy="68" r="1.2" fill="#ff55bb" opacity="0.6"/>
+                                    <circle cx="28" cy="285" r="1.2" fill="#ee3099" opacity="0.5"/>
+                                    <circle cx="355" cy="165" r="1.3" fill="#cc2080" opacity="0.4"/>
+                                    <circle cx="378" cy="230" r="1" fill="#dd1888" opacity="0.35"/>
+                                    <!-- Textura sutil de "energía" en la zona del dragón -->
+                                    <ellipse cx="130" cy="88" rx="35" ry="32" fill="none" stroke="#ff40b8" stroke-width="0.8" opacity="0.25" filter="url(#valoBlurSm)"/>
+                                    <ellipse cx="130" cy="88" rx="58" ry="54" fill="none" stroke="#dd10a0" stroke-width="0.6" opacity="0.15" filter="url(#valoBlurSm)"/>
+                                </g>
+                            </svg>
+                            <div class="valo-smoke"></div>
+                            <div class="valo-floor"></div>
+                            <div class="valo-spirit"></div>
+                            <div class="valo-motes"></div>
+                            <div class="fox-scales"></div>
+                            <div class="card-light valo-light"></div>
+                            <div class="fox-floor-shadow"></div>
+                            <div class="spirit-crack crack-tl">
+                                <svg viewBox="0 0 100 100" fill="none">
+                                    <path d="M0 0 L30 0 L42 14 L37 27 L54 30 L48 45" stroke="#ff6ba0" stroke-width="1.5"/>
+                                    <path d="M0 0 L0 38 L12 47" stroke="#ff6ba0" stroke-width="1.5"/>
+                                    <circle cx="42" cy="14" r="2" fill="#ff6ba0"/>
+                                    <circle cx="48" cy="45" r="1.5" fill="#ff6ba0"/>
+                                </svg>
+                            </div>
+                            <div class="spirit-crack crack-br">
+                                <svg viewBox="0 0 115 115" fill="none">
+                                    <path d="M0 0 L30 0 L42 14 L37 27 L54 30 L48 45" stroke="#ff6ba0" stroke-width="1.5"/>
+                                    <path d="M0 0 L0 38 L12 47" stroke="#ff6ba0" stroke-width="1.5"/>
+                                    <circle cx="42" cy="14" r="2" fill="#ff6ba0"/>
+                                    <circle cx="48" cy="45" r="1.5" fill="#ff6ba0"/>
+                                </svg>
+                            </div>
+                            <div class="fox-mask-badge"><i class="fa-brands fa-playstation"></i></div>
+                            <div class="card-scanlines"></div>
+                            <div class="card-char-wrap">
+                                <img src="breaking.png" alt="Breaking Bad" class="card-char-img" loading="lazy" decoding="async">
+                            </div>
+                            <div class="card-front-info">
+                                <div class="card-info-top">
+                                    <span class="card-game-chip valo-chip"><i class="fa-brands fa-playstation"></i> PlayStation</span>
+                                    <span class="fox-role"><i class="fa-solid fa-biohazard"></i> HORROR</span>
+                                </div>
+                                <div class="card-info-bottom">
+                                    <p class="card-game-label">PlayStation</p>
+                                    <h3 class="card-username">ARSINPALS<span class="card-tag">
+                                    <div class="fox-statbar">
+                                        <span class="stat-label">Logros</span>
+                                        <div class="stat-track"><div class="stat-fill"></div></div>
+                                    </div>
+                                    <div class="card-divider-line valo-line"></div>
+                                    <p class="card-sub">PSID <i class="fas fa-arrow-up-right-from-square"></i></p>
+                                </div>
+                            </div>
+                            <div class="card-corner top-left"></div>
+                            <div class="card-corner top-right"></div>
+                            <div class="card-corner bottom-left"></div>
+                            <div class="card-corner bottom-right"></div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="flip-back valo-back">
+                            <div class="card-bg valo-bg" style="background-image:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXgwOWo0YTF0MTBtNDh6cm90a3doam16eHo0cmk2dmYweTFhOWZieiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT8qAZ9GQURUiB4IN2/giphy.gif');background-size:cover;background-position:center top;""></div>
+                            <!-- SVG animado: vignette + chispas magenta del dragon espiritu (reverso) -->
+                            <svg class="valo-anim-svg" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <radialGradient id="vigValoB" cx="50%" cy="45%" r="65%">
+                                        <stop offset="55%" stop-color="transparent"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0.75"/>
+                                    </radialGradient>
+                                    <radialGradient id="glowValoB" cx="35%" cy="20%" r="55%">
+                                        <stop offset="0%"  stop-color="#ff40c0" stop-opacity="0.30"/>
+                                        <stop offset="100%" stop-color="transparent"/>
+                                    </radialGradient>
+                                    <filter id="glowVB" x="-50%" y="-50%" width="200%" height="200%">
+                                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                                        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                    <filter id="blur2VB"><feGaussianBlur stdDeviation="2"/></filter>
+                                    <clipPath id="cardClipVB"><rect width="420" height="520" rx="22"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#cardClipVB)">
+                                    <rect width="420" height="520" fill="url(#vigValoB)"/>
+                                    
+                                    <circle cx="60" cy="162" r="2" fill="#ff80d0" opacity="0.9" filter="url(#glowVB)">
+                                        <animate attributeName="cy" values="162;122;162" dur="4.2s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4.2s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="90" cy="82" r="1.6" fill="#ff60c0" opacity="0.8" filter="url(#glowVB)">
+                                        <animate attributeName="cy" values="82;52;82" dur="5.1s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="5.1s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <circle cx="38" cy="282" r="1.8" fill="#ff40b0" opacity="0.7" filter="url(#glowVB)">
+                                        <animate attributeName="cy" values="282;247;282" dur="3.8s" repeatCount="indefinite"/>
+                                        <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.8s" repeatCount="indefinite"/>
+                                    </circle>
+                                    <g filter="url(#glowVB)">
+                                        <ellipse cx="128" cy="90" rx="38" ry="35" fill="#ff20a0" opacity="0.17" filter="url(#blur2VB)">
+                                            <animate attributeName="opacity" values="0.17;0.30;0.17" dur="3.2s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                        <ellipse cx="128" cy="90" rx="17" ry="15" fill="#ff60c8" opacity="0.33" filter="url(#blur2VB)">
+                                            <animate attributeName="opacity" values="0.33;0.52;0.33" dur="3.2s" repeatCount="indefinite"/>
+                                        </ellipse>
+                                    </g>
+                                    <ellipse cx="210" cy="220" rx="130" ry="150" fill="#aa0060" opacity="0.05">
+                                        <animate attributeName="opacity" values="0.05;0.1;0.05" dur="7s" repeatCount="indefinite"/>
+                                    </ellipse>
+                                </g>
+                            </svg>
+                            <svg class="valo-scene-svg" viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <radialGradient id="valoDragonGlow2" cx="35%" cy="22%" r="55%">
+                                        <stop offset="0%" stop-color="#ff40c0" stop-opacity="0.8"/>
+                                        <stop offset="30%" stop-color="#cc1080" stop-opacity="0.45"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <radialGradient id="valoFloorRef2" cx="42%" cy="100%" r="55%">
+                                        <stop offset="0%" stop-color="#ff40b0" stop-opacity="0.40"/>
+                                        <stop offset="100%" stop-color="#0a0005" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <filter id="valoBlur2"><feGaussianBlur stdDeviation="10"/></filter>
+                                    <filter id="valoBlurSm2"><feGaussianBlur stdDeviation="2.5"/></filter>
+                                    <clipPath id="valoCard2"><rect width="420" height="520" rx="22"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#valoCard2)">
+                                    <rect width="420" height="520" fill="#0a0005"/>
+                                    <ellipse cx="145" cy="110" rx="195" ry="170" fill="url(#valoDragonGlow2)" filter="url(#valoBlur2)"/>
+                                    
+                                    <rect x="0" y="280" width="420" height="240" fill="#0a0005" opacity="0.5"/>
+                                    <ellipse cx="175" cy="495" rx="140" ry="50" fill="url(#valoFloorRef2)" filter="url(#valoBlur2)"/>
+                                    <circle cx="55" cy="140" r="2" fill="#ff80d0" opacity="0.8" filter="url(#valoBlurSm2)"/>
+                                    <circle cx="85" cy="72" r="1.8" fill="#ff60c0" opacity="0.7" filter="url(#valoBlurSm2)"/>
+                                    <circle cx="38" cy="198" r="1.5" fill="#ff50b8" opacity="0.6"/>
+                                    <circle cx="178" cy="48" r="1.5" fill="#ff70cc" opacity="0.65" filter="url(#valoBlurSm2)"/>
+                                </g>
+                            </svg>
+                            <div class="valo-smoke"></div>
+                            <div class="valo-floor"></div>
+                            <div class="valo-spirit"></div>
+                            <div class="valo-motes"></div>
+                            <div class="fox-scales"></div>
+                            <div class="card-light valo-light"></div>
+                            <div class="spirit-crack crack-tl">
+                                <svg viewBox="0 0 100 100" fill="none">
+                                    <path d="M0 0 L30 0 L42 14 L37 27 L54 30 L48 45" stroke="#ff6ba0" stroke-width="1.5"/>
+                                    <circle cx="42" cy="14" r="2" fill="#ff6ba0"/>
+                                </svg>
+                            </div>
+                            <div class="card-scanlines"></div>
+                            <div class="back-content">
+                                <div class="card-badge valo-badge"><i class="fa-brands fa-playstation"></i></div>
+                                <p class="back-game">PlayStation</p>
+                                <h3 class="back-username">ARSINPALS<span class="card-tag"></span></h3>
+                                <div class="card-divider-line valo-line"></div>
+                                <p class="back-desc">Mira mi perfil en PlayStation</p>
+                                <a href="https://profile.playstation.com/AdaWongUwU" target="_blank" class="profile-btn valo-btn">
+                                    Ver perfil <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="card-corner top-left"></div>
+                            <div class="card-corner top-right"></div>
+                            <div class="card-corner bottom-left"></div>
+                            <div class="card-corner bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+    <!-- REPRODUCTOR DE MÚSICA / BLANCO NEÓN -->
+    <aside class="music-widget" id="musicWidget" aria-label="Reproductor de música">
+        <button class="music-main-button" id="musicToggle" type="button" aria-label="Reproducir música" aria-pressed="false">
+            <i class="fa-solid fa-play" id="musicToggleIcon" aria-hidden="true"></i>
+        </button>
+        <div class="music-meta">
+            <span class="music-eyebrow">NOW PLAYING</span>
+            <strong>dont wanna be here</strong>
+            <span class="music-subtitle">Naits x Boyfifty</span>
+        </div>
+        <button class="music-volume-button" id="musicMute" type="button" aria-label="Silenciar música" aria-pressed="false">
+            <i class="fa-solid fa-volume-high" id="musicVolumeIcon" aria-hidden="true"></i>
+        </button>
+        <label class="music-volume-label" for="musicVolume">Volumen</label>
+        <input id="musicVolume" class="music-volume" type="range" min="0" max="1" step="0.05" value="0.35" aria-label="Volumen de la música">
+        <span class="music-status" id="musicStatus" aria-live="polite">Pulsa ▶ para escuchar</span>
+        <iframe id="sc-player" title="dont wanna be here — Naits x Boyfifty" scrolling="no" allow="autoplay" aria-hidden="true"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/wendy-chu-989632575/dont-wanna-be-here-by-naits-x&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+        </iframe>
+    </aside>
+
+    <footer>
+        <p> Hecho por ARSINPALS <span class="sep">·</span> © ARSINPALS - 2026 </p>
+    </footer>
+
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
